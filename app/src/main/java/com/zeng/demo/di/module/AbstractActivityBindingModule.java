@@ -1,5 +1,6 @@
 package com.zeng.demo.di.module;
 
+import com.zeng.demo.demo.mvp.DemoActivity;
 import com.zeng.demo.di.component.AppComponent;
 import com.zeng.demo.di.scope.ActivityScope;
 import com.zeng.demo.main.MainActivity;
@@ -20,5 +21,9 @@ public abstract class AbstractActivityBindingModule {
     @ActivityScope
     @ContributesAndroidInjector(modules = MainActivityModule.class)
     abstract MainActivity contributeMainActivitytInjector();
+
+    @ActivityScope
+    @ContributesAndroidInjector(modules = DemoActivityModule.class)
+    abstract DemoActivity contributeDemoActivityInjector();
 
 }

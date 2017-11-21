@@ -1,6 +1,7 @@
 package com.zeng.demo.main;
 
 import com.zeng.demo.base.BaseModel;
+import com.zeng.demo.network.TmdbWebService;
 
 import javax.inject.Inject;
 
@@ -12,8 +13,11 @@ import javax.inject.Inject;
 
 public class MainModel extends BaseModel implements MainContract.Model {
 
+
+
     @Inject
     public MainModel() {
+
     }
 
     @Override

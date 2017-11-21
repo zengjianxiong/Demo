@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import com.zeng.demo.DemoApp;
 import com.zeng.demo.di.module.AbstractActivityBindingModule;
 import com.zeng.demo.di.module.AbstractApplicationModule;
+import com.zeng.demo.network.NetworkModule;
 
 import javax.inject.Singleton;
 
@@ -13,8 +14,9 @@ import dagger.BindsInstance;
 import dagger.Component;
 import dagger.android.AndroidInjectionModule;
 import dagger.android.AndroidInjector;
-import dagger.android.DaggerApplication;
+
 import dagger.android.support.AndroidSupportInjectionModule;
+import dagger.android.support.DaggerApplication;
 
 /**
  * description:Data：2017/11/17-14:44
@@ -28,6 +30,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
         AndroidInjectionModule.class,
         AndroidSupportInjectionModule.class,
         AbstractApplicationModule.class,
+        NetworkModule.class,
         AbstractActivityBindingModule.class})
 public interface AppComponent extends AndroidInjector<DaggerApplication> {
     /**
@@ -40,9 +43,6 @@ public interface AppComponent extends AndroidInjector<DaggerApplication> {
      */
     @Override
     void inject(DaggerApplication instance);
-
-
-
 
 
     @Component.Builder

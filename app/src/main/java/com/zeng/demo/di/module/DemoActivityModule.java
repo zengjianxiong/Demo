@@ -1,9 +1,12 @@
 package com.zeng.demo.di.module;
 
+import com.zeng.demo.demo.mvp.DemoActivity;
+import com.zeng.demo.demo.mvp.DemoContract;
+import com.zeng.demo.demo.mvp.DemoModel;
+import com.zeng.demo.demo.mvp.DemoPresenter;
 import com.zeng.demo.di.scope.ActivityScope;
 import com.zeng.demo.main.MainActivity;
-import com.zeng.demo.main.MainContract;
-import com.zeng.demo.main.MainPresenter;
+import com.zeng.demo.network.TmdbWebService;
 
 import dagger.Binds;
 import dagger.Module;
@@ -16,14 +19,18 @@ import dagger.Provides;
  */
 
 @Module
-public abstract class MainActivityModule {
-
-
-
+public  class DemoActivityModule {
 
 
     @Provides
     static String provideClazzName() {
-        return MainActivity.class.getName();
+        return DemoActivity.class.getName();
     }
+
+
+
+
+
+
+
 }

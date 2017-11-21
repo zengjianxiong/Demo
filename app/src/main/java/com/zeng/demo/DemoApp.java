@@ -6,7 +6,8 @@ import com.zeng.demo.di.component.DaggerAppComponent;
 
 
 import dagger.android.AndroidInjector;
-import dagger.android.DaggerApplication;
+import dagger.android.support.DaggerApplication;
+
 
 /**
  * description:Data：2017/11/17-14:42
